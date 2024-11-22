@@ -1,0 +1,14 @@
+<div class="front">
+  <img [src]="images[index]" alt="image-slider" />
+</div>
+<div class="smallimg">
+  <img
+    *ngFor="let img of images; let i = index"
+    [src]="img" [class.active]="i == index" (click)="clickedimg(i)"/>
+  <div class="prev">
+    <button (click)="previousimage()" style="font-size: 50px">‹</button>
+  </div>
+  <div class="next">
+    <button (click)="nextimage()" style="font-size: 50px">›</button>
+  </div>
+</div>
